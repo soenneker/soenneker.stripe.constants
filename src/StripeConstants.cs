@@ -39,4 +39,35 @@ public sealed class StripeConstants
     /// The additional percentage fee Stripe charges for currency conversion (1.5%).
     /// </summary>
     public const decimal CurrencyConversionFeePercentage = 0.015m;
+
+    /// <summary>Minimum charge Stripe accepts for card payments (USD).</summary>
+    public const decimal CardMinAmount = 0.50m;
+
+    /// <summary>Maximum charge Stripe accepts for card payments (USD).</summary>
+    /// <remarks>
+    /// The amount field on <c>PaymentIntent</c>/<c>Charge</c> is 8 digits max in Stripe’s
+    /// API, so the highest legal USD value is 999 999.99.
+    /// </remarks>
+    public const decimal CardMaxAmount = 999_999.99m;
+
+    /// <summary>
+    /// Network ceiling for an individual ACH Direct Debit (same-day ACH).
+    /// </summary>
+    /// <remarks>
+    /// ACH rules cap same-day transactions at 1 million USD. Stripe may impose lower
+    /// risk limits on a per-account basis.
+    /// </remarks>
+    public const decimal AchMaximumDebitAmount = 1_000_000.00m;
+
+    /// <summary>
+    /// Typical per-debit limit Stripe places on brand-new U.S. accounts for ACH.
+    /// Not enforced by the API layer; Stripe risk checks reject larger debits
+    /// until your limit is increased.
+    /// </summary>
+    public const decimal AchSoftPerTransactionLimit = 6_000.00m;
+
+    /// <summary>
+    /// Typical weekly aggregate limit for new ACH users (U.S. accounts).
+    /// </summary>
+    public const decimal AchSoftWeeklyLimit = 10_000.00m;
 }
