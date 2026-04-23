@@ -1,11 +1,10 @@
-﻿using Soenneker.Tests.Unit;
-using Xunit;
+using Soenneker.Tests.Unit;
 
 namespace Soenneker.Stripe.Constants.Tests;
 
 public sealed class StripeConstantsTests : UnitTest
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
