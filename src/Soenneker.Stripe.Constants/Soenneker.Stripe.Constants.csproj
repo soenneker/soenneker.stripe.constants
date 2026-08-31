@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Description>A collection of helpful constants related to Stripe</Description>
+        <Description>Provides constants for common Stripe API limits, metadata keys, fee assumptions, and payment boundaries.</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Stripe.Constants</AssemblyName>

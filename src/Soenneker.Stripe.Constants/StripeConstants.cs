@@ -1,27 +1,27 @@
 ﻿namespace Soenneker.Stripe.Constants;
 
 /// <summary>
-/// A centralized collection of constants related to Stripe’s pricing, fees, and API usage.
+/// Provides reference values for common Stripe pricing assumptions, payment boundaries, metadata, and API usage.
 /// </summary>
 public sealed class StripeConstants
 {
     /// <summary>
-    /// The default percentage fee Stripe charges per card transaction (2.9%).
+    /// A common U.S. domestic-card percentage fee assumption (2.9%).
     /// </summary>
     public const decimal DefaultCardFeePercentage = 0.029m;
 
     /// <summary>
-    /// The fixed fee Stripe charges per card transaction in addition to the percentage fee ($0.30).
+    /// A common U.S. domestic-card fixed fee assumption ($0.30).
     /// </summary>
     public const decimal DefaultCardFixedFee = 0.30m;
 
     /// <summary>
-    /// The percentage fee Stripe charges for ACH Direct Debit transactions (0.8%).
+    /// A common U.S. ACH Direct Debit percentage fee assumption (0.8%).
     /// </summary>
     public const decimal AchFeePercentage = 0.008m;
 
     /// <summary>
-    /// The maximum fee Stripe charges for an ACH Direct Debit transaction ($5.00).
+    /// A common U.S. ACH Direct Debit fee-cap assumption ($5.00).
     /// </summary>
     public const decimal AchMaxFee = 5.00m;
 
@@ -36,7 +36,7 @@ public sealed class StripeConstants
     public const int MaxListPageSize = 100;
 
     /// <summary>
-    /// The additional percentage fee Stripe charges for currency conversion (1.5%).
+    /// A common additional currency-conversion fee assumption (1.5%).
     /// </summary>
     public const decimal CurrencyConversionFeePercentage = 0.015m;
 
